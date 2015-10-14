@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="optionApp"  ng-csp>
+<head>
+  <title>{{getTitle()}}</title>
+  <meta charset="utf-8">
+  <script src="../include/emojione.min.js"></script>
+  <link rel="stylesheet" href="../include/emojione.min.css" />
+
+  <script src="../include/angular.js"></script>
+  <script src="../objects.js"></script>
+  <script src="../background/defaultSet.js"></script>
+  <script src="script.js"></script>
+  <link href="style.css" rel="stylesheet">
+</head>
+  <body ng-controller="OptionController">
+    <div class="container">
+      <table>
+        <thead>
+          <tr>
+            <th>{{locale.key_thead}}</th>
+            <th>Ctrl + Alt</th>
+            <th>{{locale.output_thead}}</th>
+            <th>Ctrl + Alt + Shift</th>
+            <th>{{locale.output_thead}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="key in symbolSet">
+            <td>{{key.title}}</td>
+            <td><input type="text" ng-model="key.lowercase"></td>
+            <td><span ng-bind-html='emojiToImage(key.lowercase)'></span></td>
+            <td><input type="text" ng-model="key.uppercase"></td>
+            <td><span ng-bind-html='emojiToImage(key.uppercase)'></span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-primary" ng-click="clear()">{{locale.clear_button}}</button>
+        <button type="button" class="btn btn-primary" ng-click="toDefault()">{{locale.to_default_button}}</button>
+        <button type="button" class="btn btn-primary" ng-click="reset()">{{locale.cancel_button}}</button>
+        <button type="button" class="btn btn-primary" ng-click="save()">{{locale.save_button}}</button>
+      </div>
+    </div>
+
+	</body>
+</html>

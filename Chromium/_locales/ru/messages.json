@@ -1,0 +1,35 @@
+{
+ "ext_description":{
+   "message": "Дополнительные символы на клавиатуре",
+   "description": "extension description"
+ },
+  "options":{
+    "message": "Настройки: Дополнительные символы на клавиатуре",
+    "description": "options page title"
+  },
+ "cancel_button": {
+   "message": "Отмена",
+   "description": "cancel button"
+ },
+ "save_button": {
+   "message": "Сохранить",
+   "description": "save button"
+ },
+ "to_default_button": {
+   "message": "По умолчанию",
+   "description": "set default button"
+ },
+ "clear_button": {
+   "message": "Очистить",
+   "description": "clear button"
+ },
+ "key_thead": {
+   "message": "Клавиша",
+   "description": "Head of key titles column in option table"
+ },
+ "output_thead": {
+   "message": "Вывод",
+   "description": "Head of output columns in option table"
+ }
+
+}

@@ -1,0 +1,15 @@
+{
+  "title": "Browser Keyboard",
+  "name": "browser_keyboard",
+  "version": "0.8.0",
+  "description": "Virtual Keyboard",
+  "main": "index.js",
+  "author": "Ruslan Sayfullin",
+  "engines": {
+    "firefox": ">=38.0a1",
+    "fennec": ">=38.0a1"
+  },
+  "icon": "data/icons/64.png",
+  "license": "Apache 2.0",
+  "homepage": "browser-keyboard.github.io"
+}

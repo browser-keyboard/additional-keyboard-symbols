@@ -1,0 +1,41 @@
+{
+  "manifest_version": 2,
+
+  "name": "Additional Keyboard(Beta)",
+  "description": "__MSG_ext_description__",
+  "version": "0.1.0",
+  "icons": {
+		"48": "icons/icon48.png",
+		"64": "icons/icon64.png",
+		"128": "icons/icon128.png"
+	},
+  "background": {
+    "scripts": ["background/defaultSet.js", "background/background.js"]
+  },
+  "permissions": [
+    "storage",
+    "tabs",
+    "http://cdn.jsdelivr.net/emojione/assets/png/"
+  ],
+  "options_page": "options/index.html",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": [
+	      "include/jquery.js",
+	      "objects.js",
+	      "content/scripts/Key.js",
+	      "content/scripts/Field.js",
+	      "content/scripts/KeyboardPhysical.js",
+	      "content/scripts/Keyboard.js",
+	      "content/scripts/connect.js"
+      ],
+      "all_frames": true,
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    "*"
+  ],
+	"default_locale": "en"
+}

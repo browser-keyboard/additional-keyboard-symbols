@@ -1,0 +1,35 @@
+ {
+	"ext_description":{
+		"message": "Additional Keyboard Symbols",
+		"description": "extension description"
+	},
+ 	"options":{
+ 		"message": "Options: Additional Keyboard Symbols",
+ 		"description": "options page title"
+ 	},
+	"cancel_button": {
+		"message": "Cancel",
+		"description": "cancel button"
+	},
+	"save_button": {
+		"message": "Save",
+		"description": "save button"
+	},
+	"to_default_button": {
+		"message": "Set Default",
+		"description": "set default button"
+	},
+	"clear_button": {
+		"message": "Clear",
+		"description": "clear button"
+	},
+	"key_thead": {
+		"message": "Key",
+		"description": "Head of key titles column in option table"
+	},
+	"output_thead": {
+		"message": "Output",
+		"description": "Head of output columns in option table"
+	}
+
+ }

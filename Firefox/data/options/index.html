@@ -1,0 +1,38 @@
+<!doctype html>
+<html ng-app="optionApp"  ng-csp>
+<head>
+  <title data-l10n-id="options"></title>
+  <meta charset="utf-8">
+</head>
+  <body ng-controller="OptionController">
+    <div class="container">
+      <table>
+        <thead>
+          <tr>
+            <th data-l10n-id="key_thead"></th>
+            <th>Ctrl + Alt</th>
+            <th data-l10n-id="output_thead"></th>
+            <th>Ctrl + Alt + Shift</th>
+            <th data-l10n-id="output_thead"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="key in symbolSet">
+            <td>{{key.title}}</td>
+            <td><input type="text" ng-model="key.lowercase"></td>
+            <td><span ng-bind-html='emojiToImage(key.lowercase)'></span></td>
+            <td><input type="text" ng-model="key.uppercase"></td>
+            <td><span ng-bind-html='emojiToImage(key.uppercase)'></span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-primary" ng-click="clear()"  data-l10n-id="clear_button"></button>
+        <button type="button" class="btn btn-primary" ng-click="toDefault()"  data-l10n-id="to_default_button"></button>
+        <button type="button" class="btn btn-primary" ng-click="reset()"  data-l10n-id="cancel_button"></button>
+        <button type="button" class="btn btn-primary" ng-click="save()"  data-l10n-id="save_button"></button>
+      </div>
+    </div>
+	</body>
+</html>

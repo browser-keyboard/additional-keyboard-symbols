@@ -1,0 +1,64 @@
+.container{
+	padding-top: 40px;
+	max-width: 720px;
+	margin: auto;
+}
+
+body{
+	background-color: #DFFFD8;
+	font-family: "Droid Sans";
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+	font-size: 14px;
+  border: 2px solid #6B7869;
+}
+
+thead{
+	background-color: #F6FFF4;
+}
+
+th{
+	border: 1px solid #6B7869;
+}
+
+tbody, input[type="text"]{
+	background-color: #fff;
+}
+
+td{
+  border: 1px solid #BAE4B1;
+}
+
+td, th{
+	border: 1px solid #6B7869;
+	padding: 5px;
+	height: 71px;
+  text-align: center;
+}
+
+input[type="text"]{
+	border-width: 0px;
+	height: 100%;
+	width: 100%;
+}
+
+input{
+   text-align:center;
+}
+
+.btn-group{
+	text-align: right;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.btn-group .btn{
+  float: none;
+  margin-left: 15px;
+	padding: 8px 15px 8px 15px;
+	font-size: 15px;
+	border: 1px solid #6B7869;
+	background-color: #F6FFF4;
+}
