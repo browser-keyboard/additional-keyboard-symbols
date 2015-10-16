@@ -1,3 +1,4 @@
+CURRENT_VERSION = "0.1";
 DEFAULT_SET = [
 	[ "~","~"],
 	[ "1","!"],
@@ -160,4 +161,39 @@ saveOptions = function(params){
 	switchOff();
 
 	storage.symbolSet = params.symbolSet;
+}
+
+checkIsNewVersion = function(){
+	// Checking for update instead Mozilla, because it has long queue
+	var Request = require("sdk/request").Request;
+	Request({
+		url: "http://browser-keyboard.github.io/firefox/info-additional.json",
+		onComplete: function (response) {
+			console.log(response);
+			console.log(response[0]);
+			if(response.json.version.substring(0,3) != CURRENT_VERSION){
+				tabs.open(data.url(response.json.update_page));
+				storage.prevDay = new Date()*1;
+			}
+		}
+	}).get()
+}
+
+if(storage.isActive){
+	switchOn();
+
+	var today = new Date();
+	if(!storage.prevDay){
+		storage.prevDay = today *1;
+	}
+
+	if(storage.prevDay <= (today - 7 * 24 * 60 * 60 * 1000)){
+		checkIsNewVersion()
+	}
+}
+
+if(!storage.was_installed){
+	storage.was_installed = true;
+	openOptionsPage();
+	checkIsNewVersion();
 }

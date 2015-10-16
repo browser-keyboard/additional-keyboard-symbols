@@ -1,8 +1,8 @@
 {
-  "title": "Browser Keyboard",
-  "name": "browser_keyboard",
-  "version": "0.8.0",
-  "description": "Virtual Keyboard",
+  "title": "Additional Keyboard Symbols",
+  "name": "additional_keyboard_symbols",
+  "version": "0.1.0",
+  "description": "Additional custom keyboard symbols extensoin for browsers",
   "main": "index.js",
   "author": "Ruslan Sayfullin",
   "engines": {
@@ -10,6 +10,6 @@
     "fennec": ">=38.0a1"
   },
   "icon": "data/icons/64.png",
-  "license": "Apache 2.0",
-  "homepage": "browser-keyboard.github.io"
+  "license": "MIT",
+  "homepage": "http://browser-keyboard.github.io/additional"
 }

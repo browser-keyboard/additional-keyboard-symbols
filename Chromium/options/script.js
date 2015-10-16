@@ -2,9 +2,13 @@ angular.module('optionApp', [])
 	.controller('OptionController', ['$scope', '$sce', '$document', function($scope, $sce, $document) {
 
 		$scope.emojiToImage = function(param){
-			var emojiImage = emojione.toImage(param);
-			var trustedHtml = $sce.trustAsHtml(emojiImage)
-			return trustedHtml;
+			if(!/^([↖↗↙↘])$/.test(param)){
+				var emojiImage = emojione.toImage(param);
+				var trustedHtml = $sce.trustAsHtml(emojiImage)
+				return trustedHtml;
+			}else{
+				return $sce.trustAsHtml(param)
+			}
 		}
 
 		$scope.symbolSet = [];
